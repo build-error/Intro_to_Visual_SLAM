@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named useHello
+
+# Build rule for target.
+useHello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 useHello
+.PHONY : useHello
+
+# fast build rule for target.
+useHello/fast:
+	$(MAKE) -f CMakeFiles/useHello.dir/build.make CMakeFiles/useHello.dir/build
+.PHONY : useHello/fast
+
+#=============================================================================
+# Target rules for targets named hello_shared
+
+# Build rule for target.
+hello_shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello_shared
+.PHONY : hello_shared
+
+# fast build rule for target.
+hello_shared/fast:
+	$(MAKE) -f CMakeFiles/hello_shared.dir/build.make CMakeFiles/hello_shared.dir/build
+.PHONY : hello_shared/fast
+
+#=============================================================================
 # Target rules for targets named helloSLAM
 
 # Build rule for target.
@@ -150,6 +176,60 @@ helloSLAM.cpp.s:
 	$(MAKE) -f CMakeFiles/helloSLAM.dir/build.make CMakeFiles/helloSLAM.dir/helloSLAM.cpp.s
 .PHONY : helloSLAM.cpp.s
 
+libHelloSLAM.o: libHelloSLAM.cpp.o
+
+.PHONY : libHelloSLAM.o
+
+# target to build an object file
+libHelloSLAM.cpp.o:
+	$(MAKE) -f CMakeFiles/hello_shared.dir/build.make CMakeFiles/hello_shared.dir/libHelloSLAM.cpp.o
+.PHONY : libHelloSLAM.cpp.o
+
+libHelloSLAM.i: libHelloSLAM.cpp.i
+
+.PHONY : libHelloSLAM.i
+
+# target to preprocess a source file
+libHelloSLAM.cpp.i:
+	$(MAKE) -f CMakeFiles/hello_shared.dir/build.make CMakeFiles/hello_shared.dir/libHelloSLAM.cpp.i
+.PHONY : libHelloSLAM.cpp.i
+
+libHelloSLAM.s: libHelloSLAM.cpp.s
+
+.PHONY : libHelloSLAM.s
+
+# target to generate assembly for a file
+libHelloSLAM.cpp.s:
+	$(MAKE) -f CMakeFiles/hello_shared.dir/build.make CMakeFiles/hello_shared.dir/libHelloSLAM.cpp.s
+.PHONY : libHelloSLAM.cpp.s
+
+useHello.o: useHello.cpp.o
+
+.PHONY : useHello.o
+
+# target to build an object file
+useHello.cpp.o:
+	$(MAKE) -f CMakeFiles/useHello.dir/build.make CMakeFiles/useHello.dir/useHello.cpp.o
+.PHONY : useHello.cpp.o
+
+useHello.i: useHello.cpp.i
+
+.PHONY : useHello.i
+
+# target to preprocess a source file
+useHello.cpp.i:
+	$(MAKE) -f CMakeFiles/useHello.dir/build.make CMakeFiles/useHello.dir/useHello.cpp.i
+.PHONY : useHello.cpp.i
+
+useHello.s: useHello.cpp.s
+
+.PHONY : useHello.s
+
+# target to generate assembly for a file
+useHello.cpp.s:
+	$(MAKE) -f CMakeFiles/useHello.dir/build.make CMakeFiles/useHello.dir/useHello.cpp.s
+.PHONY : useHello.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,11 +237,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... useHello"
 	@echo "... edit_cache"
+	@echo "... hello_shared"
 	@echo "... helloSLAM"
 	@echo "... helloSLAM.o"
 	@echo "... helloSLAM.i"
 	@echo "... helloSLAM.s"
+	@echo "... libHelloSLAM.o"
+	@echo "... libHelloSLAM.i"
+	@echo "... libHelloSLAM.s"
+	@echo "... useHello.o"
+	@echo "... useHello.i"
+	@echo "... useHello.s"
 .PHONY : help
 
 
