@@ -1,5 +1,0 @@
-/home/build-error-ubuntu/Intro_to_Visual_SLAM/slambook2/ch2/build/CMakeFiles/rebuild_cache.dir
-/home/build-error-ubuntu/Intro_to_Visual_SLAM/slambook2/ch2/build/CMakeFiles/useHello.dir
-/home/build-error-ubuntu/Intro_to_Visual_SLAM/slambook2/ch2/build/CMakeFiles/edit_cache.dir
-/home/build-error-ubuntu/Intro_to_Visual_SLAM/slambook2/ch2/build/CMakeFiles/hello_shared.dir
-/home/build-error-ubuntu/Intro_to_Visual_SLAM/slambook2/ch2/build/CMakeFiles/helloSLAM.dir
